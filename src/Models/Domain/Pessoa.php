@@ -6,87 +6,108 @@ namespace App\Models\Domain;
 
 class Pessoa
 {
-    private $nome;
-    private $rg;
-    private $cpf;
-    private $endereco;
+    private string $nome;
+    private string $rg;
+    private string $cpf;
+    private string $endereco;
+    private bool $sexo;
 
     /**
      * Pessoa constructor.
-     * @param $nome
-     * @param $rg
-     * @param $cpf
-     * @param $endereco
+     * @param string $nome
+     * @param string $rg
+     * @param string $cpf
+     * @param string $endereco
+     * @param bool $sexo
      */
-    public function __construct($nome, $rg, $cpf, $endereco)
+    public function __construct(string $nome, string $rg, string $cpf, string $endereco, bool $sexo)
     {
         $this->nome = $nome;
         $this->rg = $rg;
         $this->cpf = $cpf;
         $this->endereco = $endereco;
+        $this->sexo = $sexo;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getNome()
+    public function getNome(): string
     {
         return $this->nome;
     }
 
     /**
-     * @param mixed $nome
+     * @param string $nome
      */
-    public function setNome($nome): void
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getRg()
+    public function getRg(): string
     {
         return $this->rg;
     }
 
     /**
-     * @param mixed $rg
+     * @param string $rg
      */
-    public function setRg($rg): void
+    public function setRg(string $rg): void
     {
         $this->rg = $rg;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getCpf()
+    public function getCpf(): string
     {
         return $this->cpf;
     }
 
     /**
-     * @param mixed $cpf
+     * @param string $cpf
      */
-    public function setCpf($cpf): void
+    public function setCpf(string $cpf): void
     {
         $this->cpf = $cpf;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getEndereco()
+    public function getEndereco(): string
     {
         return $this->endereco;
     }
 
     /**
-     * @param mixed $endereco
+     * @param string $endereco
      */
-    public function setEndereco($endereco): void
+    public function setEndereco(string $endereco): void
     {
         $this->endereco = $endereco;
     }
+
+    /**
+     * @return bool
+     */
+    public function isSexo(): bool
+    {
+        return $this->sexo;
+    }
+
+    /**
+     * @param bool $sexo
+     */
+    public function setSexo(bool $sexo): void
+    {
+        $this->sexo = $sexo;
+    }
+
+
 }
