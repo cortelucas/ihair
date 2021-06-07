@@ -9,6 +9,7 @@ class Pessoa
     private string $nome;
     private string $rg;
     private string $cpf;
+    private string $email;
     private string $endereco;
     private bool $sexo;
 
@@ -17,14 +18,16 @@ class Pessoa
      * @param string $nome
      * @param string $rg
      * @param string $cpf
+     * @param string $email
      * @param string $endereco
      * @param bool $sexo
      */
-    public function __construct(string $nome, string $rg, string $cpf, string $endereco, bool $sexo)
+    public function __construct(string $nome, string $rg, string $cpf, string $email, string $endereco, bool $sexo)
     {
         $this->nome = $nome;
         $this->rg = $rg;
         $this->cpf = $cpf;
+        $this->email = $email;
         $this->endereco = $endereco;
         $this->sexo = $sexo;
     }
@@ -75,6 +78,22 @@ class Pessoa
     public function setCpf(string $cpf): void
     {
         $this->cpf = $cpf;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
     }
 
     /**
