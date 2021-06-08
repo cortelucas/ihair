@@ -134,7 +134,7 @@ class Pessoa
     /**
      * @return bool
      */
-    public function isSexo(): bool
+    public function getSexo(): bool
     {
         return $this->sexo;
     }
@@ -146,6 +146,8 @@ class Pessoa
     {
         $this->sexo = $sexo;
     }
+
+
 
 
 }
