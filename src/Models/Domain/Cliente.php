@@ -9,9 +9,9 @@ class Cliente extends Pessoa
     private int $id;
     private int $bonificacao;
 
-    public function __construct(int $id, string $nome, string $rg, string $cpf, string $email, string $endereco, bool $sexo, int $bonificacao )
+    public function __construct(int $id, string $nome, string $rg, string $cpf, string $telefone, string $email, string $endereco, bool $sexo, int $bonificacao )
     {
-        parent::__construct($nome, $rg, $cpf, $email, $endereco, $sexo);
+        parent::__construct($nome, $rg, $cpf, $telefone, $email, $endereco, $sexo);
         $this->id = $id;
         $this->bonificacao = $bonificacao;
     }

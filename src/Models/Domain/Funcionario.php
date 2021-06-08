@@ -16,9 +16,9 @@ class Funcionario extends Pessoa
      * @param float $salario
      * @param float $comissao
      */
-    public function __construct(int $id, string $nome, string $rg, string $cpf, string $email, string $endereco, bool $sexo, float $salario, float $comissao)
+    public function __construct(int $id, string $nome, string $rg, string $cpf, string $telefone, string $email, string $endereco, bool $sexo, float $salario, float $comissao)
     {
-        parent::__construct($nome, $rg, $cpf, $email, $endereco, $sexo);
+        parent::__construct($nome, $rg, $cpf, $telefone, $email, $endereco, $sexo);
         $this->id = $id;
         $this->salario = $salario;
         $this->comissao = $comissao;
