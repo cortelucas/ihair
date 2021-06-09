@@ -4,3 +4,10 @@ require __DIR__."/vendor/autoload.php";
 
 $method = $_SERVER['REQUEST_METHOD'];
 $path = $_SERVER['PATH_INFO'] ?? '/';
+
+$route = new App\Router($method, $path);
+
+
+$route->get('/login', 'App\Controllers\LoginController::index');
+
+$route->get('/', 'App\Controllers\HomeController::index');
