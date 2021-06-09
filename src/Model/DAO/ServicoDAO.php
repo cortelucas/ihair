@@ -1,9 +1,9 @@
 <?php
 
 
-namespace APP\Models\DAO;
+namespace APP\Model\DAO;
 
-use App\Models\Domain\Servico;
+use App\Model\Domain\Servico;
 
 class ServicoDAO
 {

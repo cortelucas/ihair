@@ -1,7 +1,7 @@
 <?php
 
 
-namespace APP\Models\DAO;
+namespace APP\Model\DAO;
 
 use PDO;
 class DAO

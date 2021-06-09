@@ -1,9 +1,9 @@
 <?php
 
 
-namespace APP\Models\DAO;
+namespace APP\Model\DAO;
 
-use App\Models\Domain\Agenda;
+use App\Model\Domain\Agenda;
 
 class AgendaDAO
 {

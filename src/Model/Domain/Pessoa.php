@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Models\Domain;
+namespace App\Model\Domain;
 
 
 class Pessoa

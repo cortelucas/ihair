@@ -1,9 +1,9 @@
 <?php
 
 
-namespace APP\Models\DAO;
+namespace APP\Model\DAO;
 
-use App\Models\Domain\Cliente;
+use App\Model\Domain\Cliente;
 
 class ClienteDAO
 {

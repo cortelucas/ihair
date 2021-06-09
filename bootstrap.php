@@ -8,6 +8,6 @@ $path = $_SERVER['PATH_INFO'] ?? '/';
 $route = new App\Router($method, $path);
 
 
-$route->get('/login', 'App\Controllers\LoginController::index');
+$route->get('/login', 'App\Controller\LoginController::index');
 
-$route->get('/', 'App\Controllers\HomeController::index');
+$route->get('/', 'App\Controller\HomeController::index');
