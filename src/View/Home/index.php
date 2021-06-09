@@ -112,9 +112,25 @@
     </section>
     <section class="map">
         <div class="container mt-5">
-            <h2 class="title-black">Salões mais perto</h2>
-
+            <h2 class="title-black">Salões + próximos</h2>
+            <div class="container">
+                <div id="mapid"></div>
+            </div>
         </div>
     </section>
 
+
+    <script>
+        let map = L.map('mapid').setView([-21.511200, -51.435429], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-21.511200, -51.435429]).addTo(map)
+            .bindPopup('Salões mais próximos.')
+            .openPopup();
+
+
+    </script>
 <?php require '../src/View/rodape.php'; ?>
