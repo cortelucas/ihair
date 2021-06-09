@@ -7,7 +7,14 @@ $path = $_SERVER['PATH_INFO'] ?? '/';
 
 $route = new App\Router($method, $path);
 
-
-$route->get('/login', 'App\Controller\LoginController::index');
-
 $route->get('/', 'App\Controller\HomeController::index');
+
+$result = $route->handler();
+
+if (!$result){
+    http_response_code(404);
+    echo "Página não encontrada!";
+    die();
+}
+
+echo $result($route->getParams());
